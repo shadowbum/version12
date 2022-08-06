@@ -41,7 +41,7 @@ def sign_url(token: str, url: URL):
     return url.with_path(path).with_query(query)
 
 def nameRamdom():
-    populaton = 'abcdefgh1jklmnopqrstuvwxyz1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+    populaton = 'abcdefghijklmnopqrstuvwxyz1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ'
     name = "".join(random.sample(populaton,10))
     return name
 
@@ -239,7 +239,7 @@ def onmessage(update,bot:ObigramClient):
     try:
         thread = bot.this_thread
         username = update.message.sender.username
-        tl_admin_user = os.environ.get('tl_admin_user')
+        tl_admin_user = os.environ.get('Abolanos3')
 
         #set in debug
         #tl_admin_user = 'Abolanos3'
@@ -370,7 +370,7 @@ def onmessage(update,bot:ObigramClient):
             else:
                 bot.sendMessage(update.message.chat.id,'❌No Tiene Permiso❌')
             return
-        if '/getdbs' in msgText:
+        if '/getdb' in msgText:
             isadmin = jdb.is_admin(username)
             if isadmin:
                 bot.sendMessage(update.message.chat.id,'Base De Datos👇')
@@ -717,7 +717,7 @@ def onmessage(update,bot:ObigramClient):
                 # set in debug
             #    api_id = 7386053
             #    api_hash = '78d1c032f3aa546ff5176d9ff0e7f341'
-            #    bot_token = '5124841893:AAH30p6ljtIzi2oPlaZwBmCfWQ1KelC6KUg'
+            #    bot_token = '5577141117:AAHWkLldfU0E2SCzn2tRmgpDCH8atLB7FXQ'
 
             #    chat_id = int(update.message.chat.id)
             #    message_id = int(update.message.message_id)
@@ -815,7 +815,7 @@ def convert2calendar(update,bot:ObigramClient):
     pass
 
 def main():
-    bot_token = os.environ.get('bot_token')
+    bot_token = os.environ.get('5577141117:AAHWkLldfU0E2SCzn2tRmgpDCH8atLB7FXQ')
     print('init bot.')
     #set in debug
     #bot_token = '5577141117:AAHWkLldfU0E2SCzn2tRmgpDCH8atLB7FXQ'
