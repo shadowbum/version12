@@ -242,7 +242,7 @@ def onmessage(update,bot:ObigramClient):
         tl_admin_user = os.environ.get('tl_admin_user')
 
         #set in debug
-        #tl_admin_user = 'obidevel'
+        #tl_admin_user = 'Abolanos3'
 
         jdb = JsonDatabase('database')
         jdb.check_create()
@@ -370,7 +370,7 @@ def onmessage(update,bot:ObigramClient):
             else:
                 bot.sendMessage(update.message.chat.id,'❌No Tiene Permiso❌')
             return
-        if '/getdb' in msgText:
+        if '/getdbs' in msgText:
             isadmin = jdb.is_admin(username)
             if isadmin:
                 bot.sendMessage(update.message.chat.id,'Base De Datos👇')
@@ -818,7 +818,7 @@ def main():
     bot_token = os.environ.get('bot_token')
     print('init bot.')
     #set in debug
-    #bot_token = '5350913309:AAE6_F3tyck8PQSComzgd0o6AeQ3xpKDcIU'
+    #bot_token = '5577141117:AAHWkLldfU0E2SCzn2tRmgpDCH8atLB7FXQ'
     bot = ObigramClient(bot_token)
     bot.onMessage(onmessage)
     bot.onCallbackData('/cancel ',cancel_task)
